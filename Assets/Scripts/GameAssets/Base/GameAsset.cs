@@ -6,5 +6,5 @@ using UnityEngine;
 /// İçerisinde bu assetin infosunu tutmaktadır. </Summary>
 public abstract class GameAsset : ScriptableObject
 {
-    [HideInInspector] public string eventInfo;
+    [HideInInspector] public string assetInfo;
 }
