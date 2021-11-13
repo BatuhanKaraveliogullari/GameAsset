@@ -5,7 +5,7 @@ using UnityEngine;
 ///Onu dinleyen bitün fonksiyonlarda bu int parametresini alırlar ve kullanarak Invoke olurlar.
 ///Bu haberleşmeyi eventler ile yapmaktadır.</Summary>
 ///<see cref="GameEvent"/>
-[CreateAssetMenu(fileName = "NewIntEvent", menuName = "GameEvents/IntEvent")]
+[CreateAssetMenu(fileName = "NewIntEvent", menuName = "GameAssets/GameEvents/IntEvent")]
 public class IntEvent : GameEvent
 {
     private System.Action<int> gameEvent;

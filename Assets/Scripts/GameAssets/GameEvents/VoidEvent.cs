@@ -5,7 +5,7 @@ using UnityEngine;
 ///Onu dinleyen bitün fonksiyonlarda parametresiz olurlar ve direkt invoke olurlar.
 ///Bu haberleşmeyi eventler ile yapmaktadır.</Summary>
 ///<see cref="GameEvent"/>
-[CreateAssetMenu(fileName = "NewVoidEvent", menuName = "GameEvents/VoidEvent")]
+[CreateAssetMenu(fileName = "NewVoidEvent", menuName = "GameAssets/GameEvents/VoidEvent")]
 public class VoidEvent : GameEvent
 {
     private System.Action gameEvent;

@@ -4,7 +4,7 @@ using UnityEngine;
 ///Burada bir adet bool değişkeni bu classa yazılır ve onu realtime okuyan bitün classlar bu değeri set etmektedir.
 ///Bu haberleşmeyi variablelar ile yapmaktadır.</Summary>
 ///<see cref="GameVariable"/>
-[CreateAssetMenu(fileName = "NewBoolVariable", menuName = "GameVariables/BoolVariable")]
+[CreateAssetMenu(fileName = "NewBoolVariable", menuName = "GameAssets/GameVariables/BoolVariable")]
 public class BoolVariable : GameVariable
 {
     public bool Value { get => savedValue; }

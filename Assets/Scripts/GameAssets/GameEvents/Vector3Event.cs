@@ -5,7 +5,7 @@ using UnityEngine;
 ///Onu dinleyen bitün fonksiyonlarda bu Vector3 parametresini alırlar ve kullanarak Invoke olurlar.
 ///Bu haberleşmeyi eventler ile yapmaktadır.</Summary>
 ///<see cref="GameEvent"/>
-[CreateAssetMenu(fileName = "NewVector3Event", menuName = "GameEvents/Vector3Event")]
+[CreateAssetMenu(fileName = "NewVector3Event", menuName = "GameAssets/GameEvents/Vector3Event")]
 public class Vector3Event : GameEvent
 {
     private System.Action<Vector3> gameEvent;

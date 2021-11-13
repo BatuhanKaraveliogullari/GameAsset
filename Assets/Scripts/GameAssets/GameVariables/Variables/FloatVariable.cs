@@ -4,7 +4,7 @@ using UnityEngine;
 ///Burada bir adet float değişkeni bu classa yazılır ve onu realtime okuyan bitün classlar bu değeri set etmektedir.
 ///Bu haberleşmeyi variablelar ile yapmaktadır.</Summary>
 ///<see cref="GameVariable"/>
-[CreateAssetMenu(fileName = "NewFloatVariable", menuName = "GameVariables/FloatVariable")]
+[CreateAssetMenu(fileName = "NewFloatVariable", menuName = "GameAssets/GameVariables/FloatVariable")]
 public class FloatVariable : GameVariable
 {
     public float Value { get => savedValue; }

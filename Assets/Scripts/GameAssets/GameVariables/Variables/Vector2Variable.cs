@@ -4,7 +4,7 @@ using UnityEngine;
 ///Burada bir adet Vector2 değişkeni bu classa yazılır ve onu realtime okuyan bitün classlar bu değeri set etmektedir.
 ///Bu haberleşmeyi variablelar ile yapmaktadır.</Summary>
 ///<see cref="GameVariable"/>
-[CreateAssetMenu(fileName = "NewVector2Variable", menuName = "GameVariables/Vector2Variable")]
+[CreateAssetMenu(fileName = "NewVector2Variable", menuName = "GameAssets/GameVariables/Vector2Variable")]
 public class Vector2Variable : GameVariable
 {
     public Vector2 Value { get => savedValue; }

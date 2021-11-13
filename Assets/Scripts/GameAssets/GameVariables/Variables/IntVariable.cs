@@ -4,7 +4,7 @@ using UnityEngine;
 ///Burada bir adet int değişkeni bu classa yazılır ve onu realtime okuyan bitün classlar bu değeri set etmektedir.
 ///Bu haberleşmeyi variablelar ile yapmaktadır.</Summary>
 ///<see cref="GameVariable"/>
-[CreateAssetMenu(fileName = "NewIntVariable", menuName = "GameVariables/IntVariable")]
+[CreateAssetMenu(fileName = "NewIntVariable", menuName = "GameAssets/GameVariables/IntVariable")]
 public class IntVariable : GameVariable
 {
     public int Value { get => savedValue; }

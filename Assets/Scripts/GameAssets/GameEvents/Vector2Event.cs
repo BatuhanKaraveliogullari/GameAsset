@@ -5,7 +5,7 @@ using UnityEngine;
 ///Onu dinleyen bitün fonksiyonlarda bu Vector2 parametresini alırlar ve kullanarak Invoke olurlar.
 ///Bu haberleşmeyi eventler ile yapmaktadır.</Summary>
 ///<see cref="GameEvent"/>
-[CreateAssetMenu(fileName = "NewVector2Event", menuName = "GameEvents/Vector2Event")]
+[CreateAssetMenu(fileName = "NewVector2Event", menuName = "GameAssets/GameEvents/Vector2Event")]
 public class Vector2Event : GameEvent
 {
     private System.Action<Vector2> gameEvent;

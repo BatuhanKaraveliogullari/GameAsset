@@ -5,7 +5,7 @@ using UnityEngine;
 ///Onu dinleyen bitün fonksiyonlarda bu true veya false parametresini alırlar ve kullanarak Invoke olurlar.
 ///Bu haberleşmeyi eventler ile yapmaktadır.</Summary>
 ///<see cref="GameEvent"/>
-[CreateAssetMenu(fileName = "NewBoolEvent", menuName = "GameEvents/BoolEvent")]
+[CreateAssetMenu(fileName = "NewBoolEvent", menuName = "GameAssets/GameEvents/BoolEvent")]
 public class BoolEvent : GameEvent
 {
     private System.Action<bool> gameEvent;

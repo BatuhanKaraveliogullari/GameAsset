@@ -5,7 +5,7 @@ using System;
 /// Bu classın olması şunu sağlamaktadır: variableı ve eventi gereksiz yere bir classa refere edip OnEnable ve OnDisable fonksiyonu 
 /// çağırılması engellenmektedir. Bu scriptableObjectten oyunda sadece bir adet olacaktır.</Summary>
 ///<see cref="GameAsset"/>
-[CreateAssetMenu(fileName = "NewVariableSetter", menuName = "VariableSetter")]
+[CreateAssetMenu(fileName = "NewVariableSetter", menuName = "GameAssets/VariableSetter")]
 public class VariableSetter : GameAsset
 {
     [SerializeField] private IntVariableSetter[] intVariableSetters;

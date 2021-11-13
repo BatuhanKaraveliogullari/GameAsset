@@ -5,7 +5,7 @@ using UnityEngine;
 ///Onu dinleyen bitün fonksiyonlarda bu float parametresini alırlar ve kullanarak Invoke olurlar.
 ///Bu haberleşmeyi eventler ile yapmaktadır.</Summary>
 ///<see cref="GameEvent"/>
-[CreateAssetMenu(fileName = "NewFloatEvent", menuName = "GameEvents/FloatEvent")]
+[CreateAssetMenu(fileName = "NewFloatEvent", menuName = "GameAssets/GameEvents/FloatEvent")]
 public class FloatEvent : GameEvent
 {
     private System.Action<float> gameEvent;
