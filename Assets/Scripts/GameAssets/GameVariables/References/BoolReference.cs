@@ -1,6 +1,7 @@
 using System;
 
-///<Summary> Bu class oluşturulan variableının farklı classlarda çağırılıp okunmasını sağlamaktadır. </Summary>
+///<Summary> Bu class oluşturulan variableının farklı classlarda çağırılıp okunmasını sağlamaktadır. 
+/// Eğer bool a cast edilerek kullanılırsa refere edilmiş valueyu dönmektedir.(ex: (bool)myFloatReference )</Summary>
 [Serializable]
 public class BoolReference
 {
@@ -18,10 +19,7 @@ public class BoolReference
 
     /// <value> Property <c> Value </c> Bu reference ait olan variableın değerini dönmektedir. 
     ///Eğer sabir bir değer girildiyse onu döner. </value>
-    public bool Value
-    {
-        get { return UseConstant ? ConstantValue : Variable.Value; }
-    }
+    public bool Value{ get => UseConstant ? ConstantValue : Variable.Value; }
 
     public static implicit operator bool(BoolReference reference)
     {
