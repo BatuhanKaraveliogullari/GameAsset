@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Assertions;
 
 ///<Summary> Bu class bool parametresi ile haberleşmeyi sağlamaktadır.
 ///Yani bir eventi true veya false olarak Raise etmemizi sağlar.
@@ -25,6 +26,7 @@ public class BoolEvent : GameEvent
     ///<Summary> Bu event raise edilmektedir. Dinleyecek olan bütün listenerlar bu raise işlemi sonrasında triggerlanırlar. </Summary>
     public void Raise(bool value)
     {
+        Assert.IsNotNull(gameEvent, this.name + " was raised but this event has no listener.");
         gameEvent?.Invoke(value);
     }
 }

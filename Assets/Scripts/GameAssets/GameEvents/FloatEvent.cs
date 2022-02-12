@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Assertions;
 
 ///<Summary> Bu class float parametresi ile haberleşmeyi sağlamaktadır.
 ///Yani bir eventi float olarak Raise etmemizi sağlar.
@@ -25,6 +26,7 @@ public class FloatEvent : GameEvent
     ///<Summary> Bu event raise edilmektedir. Dinleyecek olan bütün listenerlar bu raise işlemi sonrasında triggerlanırlar. </Summary>
     public void Raise(float value)
     {
+        Assert.IsNotNull(gameEvent, this.name + " was raised but this event has no listener.");
         gameEvent?.Invoke(value);
     }
 }
