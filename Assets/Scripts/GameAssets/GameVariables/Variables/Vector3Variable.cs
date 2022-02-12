@@ -21,10 +21,10 @@ public class Vector3Variable : GameVariable
     }
 
     ///<Summary> Float ile değer ataması yapılmaktadır.</Summary>
-    public void SetValue(Vector2 amount) => savedValue = amount;
+    public void SetValue(Vector3 amount) => savedValue = amount;
 
     ///<Summary> FloatVariable ile değer ataması yapılmaktadır.</Summary>
-    public void SetValue(Vector2Variable amount) => savedValue = amount.Value;
+    public void SetValue(Vector3Variable amount) => savedValue = amount.Value;
 
     ///<Summary> Float ile scale yapılmaktadır.</Summary>
     public void Scale(float multiplier) => savedValue *= multiplier;

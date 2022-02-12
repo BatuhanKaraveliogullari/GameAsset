@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Assertions;
 
 ///<Summary> Bu class int parametresi ile haberleşmeyi sağlamaktadır.
 ///Yani bir eventi int olarak Raise etmemizi sağlar.
@@ -25,6 +26,7 @@ public class IntEvent : GameEvent
     ///<Summary> Bu event raise edilmektedir. Dinleyecek olan bütün listenerlar bu raise işlemi sonrasında triggerlanırlar. </Summary>
     public void Raise(int value)
     {
+        Assert.IsNotNull(gameEvent, this.name + " was raised but this event has no listener.");
         gameEvent?.Invoke(value);
     }
 }
