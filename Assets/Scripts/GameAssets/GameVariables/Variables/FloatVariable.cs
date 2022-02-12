@@ -1,15 +1,15 @@
 using UnityEngine;
 
-///<Summary> Bu class oyun içerisinde haberleşmeye sağlamaktadır.
-///Burada bir adet float değişkeni bu classa yazılır ve onu realtime okuyan bitün classlar bu değeri set etmektedir.
-///Bu haberleşmeyi variablelar ile yapmaktadır.</Summary>
+///<Summary> This class provides communication within the game.
+///Here, a float variable is written to this class and all classes that read it realtime set this value.
+///It does this communication with variables.</Summary>
 ///<see cref="GameVariable"/>
 [CreateAssetMenu(fileName = "NewFloatVariable", menuName = "GameAssets/GameVariables/FloatVariable")]
 public class FloatVariable : GameVariable
 {
     public float Value { get => savedValue; }
 
-    [Tooltip("Oyun her başladığında değer kaçta kalmış olursa olsun variableın başlayacağı değerdir. Bir nevi resetable variable yapılmaktadır. Sadece oyun başında setlenir.")]
+    [Tooltip("Every time the game starts, it is the value that the variable will start with, no matter how much the value is left. A kind of resetable variable is made. It is set only at the beginning of the game.")]
     [SerializeField] private float initialValue;
 
     private float savedValue;
@@ -20,48 +20,48 @@ public class FloatVariable : GameVariable
         savedValue = initialValue;
     }
 
-    ///<Summary> Float ile değer ataması yapılmaktadır.</Summary>
+    ///<Summary> Value is assigned with float.</Summary>
     public void SetValue(float amount) => savedValue = amount;
 
-    ///<Summary> FloatVariable ile değer ataması yapılmaktadır.</Summary>
+    ///<Summary> Value is assigned with FloatVariable.</Summary>
     public void SetValue(FloatVariable amount) => savedValue = amount.Value;
 
-    ///<Summary> FloatReference ile değer ataması yapılmaktadır.</Summary>
+    ///<Summary> Value assignment is made with FloatReference.</Summary>
     public void SetValue(FloatReference amount) => savedValue = amount.Value;
 
-    ///<Summary> Float ile toplama yapılmaktadır.</Summary>
+    ///<Summary> Collection is done with float.</Summary>
     public void Increase(float amount) => savedValue += amount;
 
-    ///<Summary> FloatVariable ile toplama yapılmaktadır.</Summary>
+    ///<Summary> Collection is done with FloatVariable.</Summary>
     public void Increase(FloatVariable amount) => savedValue += amount.Value;
 
-    ///<Summary> FloatReference ile toplama yapılmaktadır.</Summary>
+    ///<Summary> Collection is done with FloatReference.</Summary>
     public void Increase(FloatReference amount) => savedValue += amount.Value;
 
-    ///<Summary> Float ile çıkarma yapılmaktadır.</Summary>
+    ///<Summary> Subtraction is done with float.</Summary>
     public void Decrease(float amount) => savedValue -= amount;
 
-    ///<Summary> FloatVariable ile çıkarma yapılmaktadır.</Summary>
+    ///<Summary> Subtraction is done with FloatVariable.</Summary>
     public void Decrease(FloatVariable amount) => savedValue -= amount.Value;
 
-    ///<Summary> FloatReference ile çıkarma yapılmaktadır.</Summary>
+    ///<Summary> Subtraction is done with FloatReference.</Summary>
     public void Decrease(FloatReference amount) => savedValue -= amount.Value;
 
-    ///<Summary> Float ile çarpma yapılmaktadır.</Summary>
+    ///<Summary> Multiplication is done with float.</Summary>
     public void Multiply(float multiplier) => savedValue *= multiplier;
 
-    ///<Summary> FloatVariable ile çarpma yapılmaktadır.</Summary>
+    ///<Summary> Multiplication is done with FloatVariable.</Summary>
     public void Multiply(FloatVariable multiplier) => savedValue *= multiplier.Value;
 
-    ///<Summary> FloatReference ile çarpma yapılmaktadır.</Summary>
+    ///<Summary> Multiplication is done with FloatReference.</Summary>
     public void Multiply(FloatReference multiplier) => savedValue *= multiplier.Value;
 
-    ///<Summary> Float ile bölme yapılmaktadır.</Summary>
+    ///<Summary> Division is done with float.</Summary>
     public void Devide(float divider) => savedValue /= divider;
 
-    ///<Summary> FloatVariable ile bölme yapılmaktadır.</Summary>
+    ///<Summary> Division is done with FloatVariable.</Summary>
     public void Devide(FloatVariable divider) => savedValue /= divider.Value;
     
-    ///<Summary> FloatReference ile bölme yapılmaktadır.</Summary>
+    ///<Summary> Division is done with FloatReference.</Summary>
     public void Devide(FloatReference divider) => savedValue /= divider.Value;
 }

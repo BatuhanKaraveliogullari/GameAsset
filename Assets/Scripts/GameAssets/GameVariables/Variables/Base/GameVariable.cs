@@ -1,9 +1,9 @@
 using UnityEngine;
-///<Summary> Bu class oyun içerisinde haberleşmeye sağlamaktadır. 
-///Bu haberleşmeyi variablelar ile yapmaktadır.</Summary>
+///<Summary> This class provides communication within the game.
+///It does this communication with variables.</Summary>
 ///<see cref="GameAsset"/>
 public class GameVariable : GameAsset 
 { 
-    [Tooltip("Oyunun her başlangıcında değeri reset etmeyi temsil eder. Eğer variable resetable ise true, değilse false olmalıdır.")]
+    [Tooltip("Represents resetting the value at each start of the game. It should be true if the variable is resetable, false otherwise.")]
     [SerializeField] protected bool useInitialValue;
 }

@@ -1,8 +1,8 @@
 using System;
 using UnityEngine;
 
-///<Summary> Bu class oluşturulan variableının farklı classlarda çağırılıp okunmasını sağlamaktadır. 
-/// Eğer Vector3 a cast edilerek kullanılırsa refere edilmiş valueyu dönmektedir.(ex: (Vector3)myFloatReference )</Summary>
+///<Summary> This class enables the created variable to be called and read in different classes.
+/// If it is cast to Vector3, the referenced value is returned. (ex: (Vector3)myFloatReference )</Summary>
 [Serializable]
 public class Vector3Reference
 {
@@ -18,8 +18,8 @@ public class Vector3Reference
         ConstantValue = value;
     }
 
-    /// <value> Property <c> Value </c> Bu reference ait olan variableın değerini dönmektedir. 
-    ///Eğer sabir bir değer girildiyse onu döner. </value>
+    /// <value> Property <c> Value </c> This reference returns the value of the variable that belongs to it.
+    ///If a constant value is entered, it returns it. </value>
     public Vector3 Value{ get => UseConstant ? ConstantValue : Variable.Value; }
 
     public static implicit operator Vector3(Vector3Reference reference)

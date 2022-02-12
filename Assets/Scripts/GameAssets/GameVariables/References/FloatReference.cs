@@ -1,7 +1,7 @@
 using System;
 
-///<Summary> Bu class oluşturulan variableının farklı classlarda çağırılıp okunmasını sağlamaktadır. 
-/// Eğer float a cast edilerek kullanılırsa refere edilmiş valueyu dönmektedir.(ex: (float)myFloatReference )</Summary>
+///<Summary> This class enables the created variable to be called and read in different classes.
+/// If a float is cast and used, the referenced value is returned. (ex: (float)myFloatReference)</Summary>
 [Serializable]
 public class FloatReference
 {
@@ -17,8 +17,8 @@ public class FloatReference
         ConstantValue = value;
     }
 
-    /// <value> Property <c> Value </c> Bu reference ait olan variableın değerini dönmektedir. 
-    ///Eğer sabir bir değer girildiyse onu döner. </value>
+    /// <value> Property <c> Value </c> This reference returns the value of the variable that belongs to it.
+    ///If a constant value is entered, it returns it. </value>
     public float Value{ get => UseConstant ? ConstantValue : Variable.Value; }
 
     public static implicit operator float(FloatReference reference)
