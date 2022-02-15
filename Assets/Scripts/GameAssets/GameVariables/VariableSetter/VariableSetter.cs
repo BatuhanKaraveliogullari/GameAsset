@@ -1,9 +1,9 @@
 using UnityEngine;
 using System;
 
-///<Summary> Bu class oyun içerisinde eğer sadece bir event bir variableı set edecekse kullanılacaktır.
-/// Bu classın olması şunu sağlamaktadır: variableı ve eventi gereksiz yere bir classa refere edip OnEnable ve OnDisable fonksiyonu 
-/// çağırılması engellenmektedir. Bu scriptableObjectten oyunda sadece bir adet olacaktır.</Summary>
+///<Summary> This class will be used in the game only if an event will set a variable.
+/// Having this class ensures that it is prevented from calling the OnEnable and OnDisable functions by unnecessarily referencing the variable and event to a class. 
+/// There will be only one of these scriptableObjects in the game.</Summary>
 ///<see cref="GameAsset"/>
 [CreateAssetMenu(fileName = "NewVariableSetter", menuName = "GameAssets/VariableSetter")]
 public class VariableSetter : GameAsset

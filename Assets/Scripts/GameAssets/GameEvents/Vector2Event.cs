@@ -1,29 +1,29 @@
 using UnityEngine;
 using UnityEngine.Assertions;
 
-///<Summary> Bu class Vector2 parametresi ile haberleşmeyi sağlamaktadır.
-///Yani bir eventi Vector2 olarak Raise etmemizi sağlar.
-///Onu dinleyen bitün fonksiyonlarda bu Vector2 parametresini alırlar ve kullanarak Invoke olurlar.
-///Bu haberleşmeyi eventler ile yapmaktadır.</Summary>
+///<Summary> This class provides communication with Vector2 parameter.
+///In other words, it allows us to raise an event as Vector2.
+///All functions that listen to it take this Vector2 parameter and become Invoke using it.
+///It does this communication with events.</Summary>
 ///<see cref="GameEvent"/>
 [CreateAssetMenu(fileName = "NewVector2Event", menuName = "GameAssets/GameEvents/Vector2Event")]
 public class Vector2Event : GameEvent
 {
     private System.Action<Vector2> gameEvent;
 
-    ///<Summary> Bu eventi dinleyecek olan fonksiyon eklenmektedir. </Summary>
+    ///<Summary> The function that will listen to this event is added. </Summary>
     public void AddListener(System.Action<Vector2> action)
     {
         gameEvent += action;
     }
     
-    ///<Summary> Bu eventi dinleyecek olan fonksiyon kaldırılmaktadır. </Summary>
+    ///<Summary> The function that will listen to this event is removed. </Summary>
     public void RemoveListener(System.Action<Vector2> action)
     {
         gameEvent -= action;
     }
 
-    ///<Summary> Bu event raise edilmektedir. Dinleyecek olan bütün listenerlar bu raise işlemi sonrasında triggerlanırlar. </Summary>
+    ///<Summary> This event is being raised. All listeners that will listen are triggered after this raise. </Summary>
     public void Raise(Vector2 value)
     {
         Assert.IsNotNull(gameEvent, this.name + " was raised but this event has no listener.");

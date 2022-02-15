@@ -1,15 +1,15 @@
 using UnityEngine;
 
-///<Summary> Bu class oyun içerisinde haberleşmeye sağlamaktadır.
-///Burada bir adet bool değişkeni bu classa yazılır ve onu realtime okuyan bitün classlar bu değeri set etmektedir.
-///Bu haberleşmeyi variablelar ile yapmaktadır.</Summary>
+///<Summary> This class provides communication within the game.
+///Here, a bool variable is written to this class and all classes that read it realtime set this value.
+///It does this communication with variables.</Summary>
 ///<see cref="GameVariable"/>
 [CreateAssetMenu(fileName = "NewBoolVariable", menuName = "GameAssets/GameVariables/BoolVariable")]
 public class BoolVariable : GameVariable
 {
     public bool Value { get => savedValue; }
 
-    [Tooltip("Oyun her başladığında değer kaçta kalmış olursa olsun variableın başlayacağı değerdir. Bir nevi resetable variable yapılmaktadır. Sadece oyun başında setlenir.")]
+    [Tooltip("Every time the game starts, it is the value that the variable will start with, no matter how much the value is left. A kind of resetable variable is made. It is set only at the beginning of the game.")]
     [SerializeField] private bool initialValue;
 
     private bool savedValue;
@@ -20,15 +20,15 @@ public class BoolVariable : GameVariable
         savedValue = initialValue;
     }
 
-    ///<Summary> Bool ile değer ataması yapılmaktadır.</Summary>
+    ///<Summary> Value is assigned with bool.</Summary>
     public void SetValue(bool amount) => savedValue = amount;
 
-    ///<Summary> BoolVariable ile değer ataması yapılmaktadır.</Summary>
+    ///<Summary> Value is assigned with BoolVariable.</Summary>
     public void SetValue(BoolVariable amount) => savedValue = amount.Value;
 
-    ///<Summary> BoolReference ile değer ataması yapılmaktadır.</Summary>
+    ///<Summary> Value assignment is made with BoolReference.</Summary>
     public void SetValue(BoolReference amount) => savedValue = amount.Value;
 
-    ///<Summary> Bu fonksiyon variable true ise false, false ise true yapmaktadır.</Summary>
+    ///<Summary> This function returns false if the variable is true and true if false.</Summary>
     public void ToggleValue() => savedValue = !savedValue;
 }

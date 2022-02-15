@@ -1,15 +1,15 @@
 using UnityEngine;
 
-///<Summary> Bu class oyun içerisinde haberleşmeye sağlamaktadır.
-///Burada bir adet Vector2 değişkeni bu classa yazılır ve onu realtime okuyan bitün classlar bu değeri set etmektedir.
-///Bu haberleşmeyi variablelar ile yapmaktadır.</Summary>
+///<Summary> This class provides communication within the game.
+///Here, a Vector2 variable is written to this class and all classes that read it realtime set this value.
+///It does this communication with variables.</Summary>
 ///<see cref="GameVariable"/>
 [CreateAssetMenu(fileName = "NewVector2Variable", menuName = "GameAssets/GameVariables/Vector2Variable")]
 public class Vector2Variable : GameVariable
 {
     public Vector2 Value { get => savedValue; }
 
-    [Tooltip("Oyun her başladığında değer kaçta kalmış olursa olsun variableın başlayacağı değerdir. Bir nevi resetable variable yapılmaktadır. Sadece oyun başında setlenir.")]
+    [Tooltip("Every time the game starts, it is the value that the variable will start with, no matter how much the value is left. A kind of resetable variable is made. It is set only at the beginning of the game.")]
     [SerializeField] private Vector2 initialValue;
 
     private Vector2 savedValue;
@@ -20,27 +20,27 @@ public class Vector2Variable : GameVariable
         savedValue = initialValue;
     }
 
-    ///<Summary> Float ile değer ataması yapılmaktadır.</Summary>
+    ///<Summary> Value assignment is made with Vector2.</Summary>
     public void SetValue(Vector2 amount) => savedValue = amount;
 
-    ///<Summary> FloatVariable ile değer ataması yapılmaktadır.</Summary>
+    ///<Summary> Value assignment is made with Vector2Variable.</Summary>
     public void SetValue(Vector2Variable amount) => savedValue = amount.Value;
 
-    ///<Summary> Float ile scale yapılmaktadır.</Summary>
+    ///<Summary> Scale is made with float.</Summary>
     public void Scale(float multiplier) => savedValue *= multiplier;
 
-    ///<Summary> İnt ile scale yapılmaktadır.</Summary>
+    ///<Summary> Scale is done with int.</Summary>
     public void Scale(int multiplier) => savedValue *= multiplier;
 
-    ///<Summary> FloatVariable ile scale yapılmaktadır.</Summary>
+    ///<Summary> Scale is done with FloatVariable.</Summary>
     public void Scale(FloatVariable multiplier) => savedValue *= multiplier.Value;
 
-    ///<Summary> FloatReference ile scale yapılmaktadır.</Summary>
+    ///<Summary> Scale is done with FloatReference.</Summary>
     public void Scale(FloatReference multiplier) => savedValue *= multiplier.Value;
 
-    ///<Summary> IntVariable ile scale yapılmaktadır.</Summary>
+    ///<Summary> Scale is made with IntVariable.</Summary>
     public void Scale(IntVariable multiplier) => savedValue *= multiplier.Value;
 
-    ///<Summary> IntReference ile scale yapılmaktadır.</Summary>
+    ///<Summary> Scale is done with IntReference.</Summary>
     public void Scale(IntReference multiplier) => savedValue *= multiplier.Value;
 }
